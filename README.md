@@ -1,2 +1,0 @@
-# shopit
-Created with CodeSandbox
