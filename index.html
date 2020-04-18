@@ -7,7 +7,173 @@
   </head>
 
   <body>
-    <div id="app"></div>
+    <div id="start-page" style="display: none;">
+      <div id="start-menu">
+        <canvas id="start-bg"></canvas>
+        <div id="start-logo"></div>
+        <h1 id="start-title">Shopit</h1>
+        <button>Play Now</button>
+      </div>
+
+      <div id="start-story">
+        <div class="story-bg"></div>
+        <p class="story-text"></p>
+      </div>
+    </div>
+
+    <div id="map-page" style="display: none;">
+      <div id="map-box">
+        <!--TODO: iterate over and create shop buttons in js-->
+        <!--Buttons or clickable Divs-->
+        
+        <!-- map shops template
+        <button id="map-shop1">
+          <div class="button-image"></div>
+          <h3 class="button-name"></h3>
+        </button>
+        -->
+      </div>
+    </div>
+
+    <div id="shop-page">
+      <div id="shop-items">
+        <div id="shop-item-container"></div>
+        <!--TODO: the shop items will be created in js-->
+        <!--shop-item-container is scrollable-->
+
+        <!-- item button template
+          <div id="shop-item1" class="item-button">
+            <div id="shop-item1-image"></div>
+            <h2 id="shop-item1-name"></h2>
+            <h3 id="shop-item1-price"></h3>
+          </div>
+        -->
+      </div>
+      <div id="shop-quiz">
+        <!-- the quiz will have different states
+          - state 0 (default): no quiz
+          - state 1 (first multiple choice): choose the correct amount of money that should be paid
+          - state 2 (first wallet quiz): choose the coins that will be used to pay
+          - state 3 (second multiple choice): choose the correct amount of money that should be given back to player
+        -->
+
+        <div id="quiz-mp-choice">
+          <h1 class="quiz-header">{{ quizText }}</h1>
+          <ol type="A">
+            <li class="choice">Plz pay {{ choice1 }} CZK</li>
+            <li class="choice">Plz pay {{ choice2 }} CZK</li>
+            <li class="choice">Plz pay {{ choice3 }} CZK</li>
+            <li class="choice">Plz pay {{ choice4 }} CZK</li>
+          </ol>
+
+        </div>
+        <div id="quiz-select-coins">
+          <div id="coins-to-pay">
+            <h1 class="quiz-header">Amount to Pay: {{ amountMoney }} CZK</h1>
+          </div>
+          
+          <div id="wallet-quiz" class="wallet">
+              <!-- coin template
+                <div id="coin1" class="button-image"></div>
+              -->
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toggle-menu">
+      <div id="toggle-button">
+        <!--
+          the button will have 3 states:
+          - state 0 (default): when toggle menu is collapsed on the right
+          - state 1 (minimal extended): when it shows only the buttons of the toggle menu
+          - state 2 (extended): when the toggle menu extended on the whole screen
+        -->
+      </div>
+
+      <button id="story-button">
+        <div class="button-image"></div>
+        <h3 class="button-name"></div>
+      </button>
+      <button id="wallet-button">
+        <div class="button-image"></div>
+        <h3 class="button-name"></div>
+      </button>
+      <button id="shoplist-button">
+        <div class="button-image"></div>
+        <h3 class="button-name"></div>
+      </button>
+      <button id="shopcart-button">
+        <div class="button-image"></div>
+        <h3 class="button-name"></div>
+      </button>
+
+      <div id="story-menu">
+        <button>
+          <div class="button-image"></div>
+          <h3 class="button-name"></div>
+        </button>
+
+        <div class="story-bg"></div>
+        <p class="story-text"></p>
+      </div>
+
+      <div id="wallet-menu">
+        <button>
+          <div class="button-image"></div>
+          <h3 class="button-name"></div>
+        </button>
+
+        <div id="wallet-display" class="wallet">
+          <!-- coin template
+            <div id="coin1" class="button-image"></div>
+          -->
+        </div>
+      </div>
+
+      <div id="shoplist-menu">
+        <button>
+          <div class="button-image"></div>
+          <h3 class="button-name"></div>
+        </button>
+
+        <div id="task-list">
+          <!-- task template
+
+          <div id="task1">
+            <h2 class="task-shop"></h2>
+            <ul class="task-item-list">
+              <li class="task-item">
+                <checkbox></checkbox>
+                <h3></h3>
+              </li>
+            </ul>
+          </div>
+
+          -->
+        </div>
+      </div>
+      
+      <div id="shopcart-menu">
+        <button>
+          <div class="button-image"></div>
+          <h3 class="button-name"></div>
+        </button>
+        <div id="selected-items">
+          <!--buttons or clickable divs contain the items picked up by the user-->
+          <!--in order of picking-->
+          <!-- item template
+            <div id="shopcart-item1" class="button-image"></div>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <div id="next-button">
+      <div class="button-image"></div>
+      <div class="button-text"></div>
+    </div>
+    
   </body>
 
   <script src="js/app.js"></script>
